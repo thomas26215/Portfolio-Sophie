@@ -61,7 +61,7 @@ body main article{
     margin-right: auto;
     margin-left: auto;
     text-align: center;
-    margin-bottom: 10%;
+    margin-bottom: 20px;
 }
 
 
@@ -93,3 +93,13 @@ body main article div{
     display: flex;
     border-radius: 10px;
 }
+
+main {
+    text-align: center; /* Pour centrage horizontal */
+}
+
+img {
+    max-width: 100%; /* Pour que l'image ne dépasse pas sa taille d'origine */
+    margin-bottom: 20px;
+}
+
