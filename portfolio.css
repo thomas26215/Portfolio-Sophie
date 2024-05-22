@@ -31,9 +31,22 @@ header h1{
     -webkit-text-stroke: 1px white;*/
 }
 
+hr{
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #50385c;
+    height: 5px;
+    background-color: #50385c;
+    border: none;
+}
+
 nav{
     padding: 0%;
 }
+
+
 
 nav ul{
     display: flex;
@@ -47,10 +60,18 @@ nav ul li {
 }
 
 nav ul li a{
+    text-decoration: none;
+}
+
+nav ul li a:link{
    font-size: large;
    text-decoration: none;
    color: black;
 }
+
+nav ul li a:link::after{
+    color: black;
+ }
 
 nav ul li a:hover {
     color: white;
