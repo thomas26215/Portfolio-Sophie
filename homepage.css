@@ -48,11 +48,6 @@ nav ul li a:hover {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
  }
 
- nav ul li a:hover {
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
- }
-
  body main{
     width: 80%;
     margin: auto;
