@@ -36,13 +36,19 @@ nav ul{
     padding: 0%;
 }
 
-nav ul li {
-   list-style: none;
-   font-size: larger;
-   text-decoration: underline;
+nav ul li a{
+    color: black;
+    list-style: none;
+    font-size: larger;
+    text-decoration: none;
 }
 
-nav ul li:hover {
+nav ul li a:hover {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+ }
+
+ nav ul li a:hover {
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
  }
