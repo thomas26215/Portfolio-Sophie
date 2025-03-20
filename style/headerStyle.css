@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("new.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 50px;
+    position: sticky;
+    top:0;    
+}
+
+header h1{
+    text-align: center;
+    color: black;
+}
+
+nav{
+    padding: 0%;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 15%;
+    padding: 0%;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+}
+
+nav ul li a:link{
+   font-size: large;
+   text-decoration: none;
+   color: black;
+}
+
+nav ul li a:visited{
+    color: black;
+ }
+
+#courant{ /* pour coloré dans la bar de navigation la page courrante */
+    color : #090b7c;
+}
+
+nav ul li a:hover {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+hr{
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 2px;
+    background-color: #090b7c;
+    border: none;
+}
+
+footer{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 50px;
+}
+
+@media screen and (max-width: 950px) { /*resonsive format telephone*/ 
+    body{
+        background-image: url("fondVertical.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-attachment: fixed;
+    }
+}
