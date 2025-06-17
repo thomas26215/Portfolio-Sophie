@@ -26,25 +26,27 @@ body main article h2{
     background-color: rgb(0, 0, 0,0.4);
     color: white;
     border-radius: 10px;
-    padding: 20px;
+    padding: 2vw;
 
 }
 body main article p{
     background-color: rgb(0, 0, 0,0.4);
     color: white;
     border-radius: 10px;
-    padding: 20px;
+    padding: 2vw;
 }
 body main article div div{
     background-color: rgb(0, 0, 0,0.4);
     color: white;
     margin: auto;
     border-radius: 10px;
-    padding: 10px;
+    padding: 2vw;
+    margin: 2vw;
     text-align: justify;
     display: flex;
     flex-direction: column;
     width: 45%;
+    margin-top: 10px;
 }
 
 body main article div{
@@ -60,5 +62,21 @@ main {
 #dev2, #bd2, #dev1, #bd1, #web1{ /* pour décaler avec le lien d'ancrage*/
     padding-top: 200px;
     margin-top: -200px;
+}
+
+@media screen and (max-width: 950px) { /*resonsive format telephone*/ 
+    body main {
+        width: 75%;
+    }
+    body main article div{
+    display: flex;
+    flex-direction: column;
+    }
+    body main article div div, h2, body main article, p {
+        width: 100%;
+        text-align: left;
+        margin: 0vw;
+        margin-top: 2vh;
+    }
 }
   

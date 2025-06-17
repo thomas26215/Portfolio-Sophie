@@ -21,6 +21,7 @@ header {
 header h1{
     text-align: center;
     color: black;
+    font-size: large;
 }
 
 nav{
@@ -53,7 +54,8 @@ nav ul li a:visited{
  }
 
 #courant{ /* pour coloré dans la bar de navigation la page courrante */
-    color : #090b7c;
+    color : #0003b3;
+    font-weight: bold;
 }
 
 nav ul li a:hover {
@@ -76,11 +78,8 @@ footer{
     padding: 50px;
 }
 
-@media screen and (max-width: 950px) { /*resonsive format telephone*/ 
+@media screen and (max-width: 1100px) { /*resonsive format telephone*/ 
     body{
-        background-image: url("fondVertical.jpg");
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-attachment: fixed;
+        background: linear-gradient(to bottom right, rgb(135, 185, 255), rgb(255, 178, 225), rgb(241, 172, 99), rgb(255, 102, 196));
     }
 }
