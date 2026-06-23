@@ -1,0 +1,270 @@
+/* ─── Animations ────────────────────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Layout ────────────────────────────────────────────────── */
+main {
+  width: min(900px, 88%);
+  margin: 0 auto;
+  padding: 52px 0 100px;
+}
+
+/* ─── En-tête de page ───────────────────────────────────────── */
+.page-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 64px;
+  animation: fadeInUp 0.5s ease both;
+}
+
+.page-header h2 {
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -1px;
+  line-height: 1;
+  margin: 0 0 6px;
+}
+
+.page-header p {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.38);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.project-count {
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(110deg, rgba(167,139,250,0.25), rgba(244,114,182,0.2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -3px;
+  user-select: none;
+}
+
+/* ─── Bloc semestre ─────────────────────────────────────────── */
+.semester-block {
+  margin-bottom: 60px;
+  animation: fadeInUp 0.5s ease both;
+}
+
+.semester-block:nth-child(2) { animation-delay: 0.06s; }
+.semester-block:nth-child(3) { animation-delay: 0.12s; }
+.semester-block:nth-child(4) { animation-delay: 0.18s; }
+.semester-block:nth-child(5) { animation-delay: 0.24s; }
+
+/* ─── En-tête de semestre ───────────────────────────────────── */
+.semester-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.semester-num {
+  font-size: 1.1rem;
+  font-weight: 800;
+  background: linear-gradient(110deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 1px;
+  flex-shrink: 0;
+}
+
+.semester-title {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: rgba(255, 255, 255, 0.32);
+  white-space: nowrap;
+}
+
+.semester-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.1), transparent);
+}
+
+/* ─── Projets dans un semestre ──────────────────────────────── */
+.semester-projects {
+  display: grid;
+  gap: 10px;
+}
+
+.semester-projects.single   { grid-template-columns: 1fr; }
+.semester-projects.double   { grid-template-columns: 1fr 1fr; }
+.semester-projects.triple   { grid-template-columns: 1fr 1fr 1fr; }
+
+/* ─── Carte projet ──────────────────────────────────────────── */
+.project-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.04);
+  
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 14px;
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+}
+
+/* Carte featured — projets récents (S4, S3) */
+.project-card.featured {
+  padding: 28px 32px;
+  gap: 14px;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.project-card.dev:hover  { box-shadow: 0 12px 40px rgba(139, 92, 246, 0.18); }
+.project-card.bd:hover   { box-shadow: 0 12px 40px rgba(56, 189, 248, 0.14); }
+.project-card.web:hover  { box-shadow: 0 12px 40px rgba(244, 114, 182, 0.18); }
+
+/* Halo coloré discret en haut de la carte */
+.project-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  opacity: 0;
+  transition: opacity 0.22s ease;
+}
+
+.project-card.dev::after { background: linear-gradient(90deg, transparent, #a78bfa, transparent); }
+.project-card.bd::after  { background: linear-gradient(90deg, transparent, #38bdf8, transparent); }
+.project-card.web::after { background: linear-gradient(90deg, transparent, #f472b6, transparent); }
+
+.project-card:hover::after { opacity: 1; }
+
+/* ─── Méta (catégorie) ──────────────────────────────────────── */
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cat-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dev .cat-dot  { background: #a78bfa; }
+.bd  .cat-dot  { background: #38bdf8; }
+.web .cat-dot  { background: #f472b6; }
+
+.card-category {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.dev .card-category { color: rgba(167, 139, 250, 0.7); }
+.bd  .card-category { color: rgba(56, 189, 248, 0.7);  }
+.web .card-category { color: rgba(244, 114, 182, 0.7); }
+
+/* ─── Titre ─────────────────────────────────────────────────── */
+.card-title {
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.featured .card-title {
+  font-size: 1.2rem;
+}
+
+/* ─── Description ───────────────────────────────────────────── */
+.card-desc {
+  font-size: 0.84rem;
+  color: rgba(255, 255, 255, 0.52);
+  line-height: 1.62;
+  margin: 0;
+  flex: 1;
+}
+
+.featured .card-desc {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.58);
+}
+
+/* ─── Footer carte ──────────────────────────────────────────── */
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.card-tags span {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.38);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 5px;
+  padding: 2px 8px;
+}
+
+.card-link {
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 1 !important;
+  transition: gap 0.2s ease, opacity 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dev  .card-link { color: rgba(167, 139, 250, 0.7) !important; }
+.bd   .card-link { color: rgba(56, 189, 248, 0.7)  !important; }
+.web  .card-link { color: rgba(244, 114, 182, 0.7) !important; }
+
+.project-card:hover .card-link {
+  gap: 9px;
+  opacity: 1 !important;
+}
+
+.dev:hover  .card-link { color: #a78bfa !important; }
+.bd:hover   .card-link { color: #38bdf8 !important; }
+.web:hover  .card-link { color: #f472b6 !important; }
+
+/* ─── Responsive ─────────────────────────────────────────────── */
+@media screen and (max-width: 740px) {
+  main { width: 90%; }
+
+  .page-header { margin-bottom: 44px; }
+  .project-count { font-size: 3rem; }
+
+  .semester-projects.double,
+  .semester-projects.triple { grid-template-columns: 1fr; }
+
+  .featured .card-title { font-size: 1.05rem; }
+}

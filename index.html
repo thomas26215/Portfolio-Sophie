@@ -1,52 +1,99 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<head>
-		<meta charset="utf-8">
-		<title>portfolio</title>
-		<link rel="stylesheet" type="text/css" href="./style/homepage.css">
-        <link rel="stylesheet" type="text/css" href="./style/headerStyle.css">
-	</head>
-    <body>
-        <header>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio – Sophie ARNAUD</title>
+    <link rel="stylesheet" type="text/css" href="./style/headerStyle.css">
+    <link rel="stylesheet" type="text/css" href="./style/index.css">
+</head>
+<body>
+    <header>
+        <div class="header-row">
             <h1>Sophie ARNAUD</h1>
             <nav>
                 <ul>
                     <li><a href="index.html" id="courant">Profil</a></li>
                     <li><a href="sae.html">Projets en BUT</a></li>
-                    <li><a href="parcourScolaireEtDiplome.html">Formation</a></li>    
+                    <li><a href="parcourScolaireEtDiplome.html">Formation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-        </header>
-        <main>
-            <article>Je m’ appelle Sophie ARNAUD, je suis actuellement étudiante en deuxième année de BUT informatique.</article> 
+        </div>
+    </header>
 
-            <article>
-                Dans ce portfolio, vous allez découvrir mes projets et les compétences techniques que j'ai acquises 
-               pendant mes études en BUT informatique. J'ai choisi de partager ces éléments pour vous montrer les
-                compétences que j'ai développées et ma créativité en tant qu'étudiante en informatique. 
-            </article>
-            <article class="colonne">
-                <img src="./style/images/logoEmpi.png" alt="logo Empi & Riaume" height="100 px">
-                J’ai également d’autres centre d’intérêts comme la danse traditionnelle. En effet, je suis membre du groupe
-                 Empi & Riaume de Romans depuis 2010 en tant que danseuse, aide monitrice pour le groupe des enfants. Je m’occupe
-                également de l’accompagnement de groupes étrangers sur le Festival International de Folklore de Romans.</a>
-                Je suis aussi animatrice pour les collégiens et lycées de l’Aumônerie de l’Enseignement Public de Romans.
-            </article>
-            <article>
-                Ces activités m’ont permis d’acquérir de nombreuses compétences comme :
-                <ul>
-                    <li>la communication, parfois difficile avec des enfants ou des personnes dont je ne parle pas la langues</li>
-                    <li>l’esprit de groupe, avec les spectacles de danse où il faut être tous ensemble</li>
-                </ul>
-            </article>
-            <article>
-                Je vous invite à découvrir mes projets et mes compétences dans ce portfolio, plus précisément dans la 
-                page "<a href="sae.html">Projet en BUT</a>". Vous découvrirez la description précise du travail réalisé en équipe et en individuel.
-            </article>
-            <article>
-                <img src="./style/images/envelope.svg" alt="contact">
-                Contact : <a href="">so.arnaud26@gmail.com</a>
-            </article>
-        </main>
-    </body>
+    <main>
+
+        <!-- ── Hero ─────────────────────────────────────────── -->
+        <section class="hero">
+            <p class="hero-tag">Portfolio</p>
+            <h2 class="hero-name">Sophie<br><span class="accent">ARNAUD</span></h2>
+            <p class="hero-role">Étudiante en BUT Informatique &mdash; Grenoble</p>
+            <p class="hero-desc">
+                Passionnée par le développement logiciel, la base de données et le web,
+                je conçois et développe des applications au sein d'équipes dynamiques.
+            </p>
+            <div class="hero-cta">
+                <a href="sae.html" class="btn-primary">Voir mes projets &rarr;</a>
+                <a href="mailto:so.arnaud26@gmail.com" class="btn-ghost">Me contacter</a>
+            </div>
+        </section>
+
+        <div class="divider"><span class="divider-dot"></span></div>
+
+        <!-- ── À propos ──────────────────────────────────────── -->
+        <section class="section">
+            <h2 class="section-label">À propos</h2>
+            <div class="about-grid">
+                <div class="card">
+                    <h3>Qui suis-je ?</h3>
+                    <p>
+                        Étudiante en deuxième année de BUT Informatique, je développe des compétences
+                        en programmation orientée objet, bases de données et développement web à travers
+                        des projets concrets en équipe.
+                    </p>
+                    <p>
+                        Dans ce portfolio, vous découvrirez mes projets et les compétences techniques
+                        que j'ai acquises — en équipe comme en individuel.
+                        Rendez-vous sur la page <a href="sae.html">Projets en BUT</a> pour en savoir plus.
+                    </p>
+                </div>
+                <div class="card">
+                    <div class="interest-header">
+                        <img src="./style/images/logoEmpi.png" alt="logo Empi & Riaume">
+                        <h3>Centres d'intérêt</h3>
+                    </div>
+                    <p>
+                        Membre du groupe Empi &amp; Riaume de Romans depuis 2010 : danseuse, aide monitrice
+                        pour les enfants, et accompagnatrice de groupes étrangers au Festival International
+                        de Folklore de Romans.
+                    </p>
+                    <p>
+                        Animatrice pour les collégiens et lycéens de l'Aumônerie de l'Enseignement Public de Romans.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Compétences transversales ─────────────────────── -->
+        <section class="section">
+            <h2 class="section-label">Compétences transversales</h2>
+            <div class="skills-grid">
+                <span class="skill-tag">Communication interculturelle</span>
+                <span class="skill-tag">Esprit d'équipe</span>
+                <span class="skill-tag">Animation &amp; pédagogie</span>
+                <span class="skill-tag">Gestion de projet</span>
+                <span class="skill-tag">Organisation</span>
+                <span class="skill-tag">Adaptabilité</span>
+            </div>
+        </section>
+
+        <!-- ── Contact ───────────────────────────────────────── -->
+        <section class="section contact-section">
+            <h2 class="section-label">Contact</h2>
+            <a href="contact.html" class="btn-primary">Me contacter &rarr;</a>
+        </section>
+
+    </main>
+</body>
 </html>

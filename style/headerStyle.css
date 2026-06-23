@@ -1,85 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+/* ─── Design Tokens ─────────────────────────────────────────── */
+:root {
+  --accent:       #a78bfa;
+  --accent-2:     #f472b6;
+  --glass-bg:     rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.11);
+  --text:         rgba(255, 255, 255, 0.93);
+  --text-muted:   rgba(255, 255, 255, 0.52);
+  --ease:         cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── Reset / Base ──────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url("new.jpg");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-attachment: fixed;
-    width: 100%;
-    margin: 0;
-    padding: 0;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background-color: #09071a;
+  background-image:
+    radial-gradient(ellipse 110% 70% at 15% 0%,   rgba(88,  52, 180, 0.14) 0%, transparent 55%),
+    radial-gradient(ellipse 70%  60% at 85% 100%, rgba(120, 40, 160, 0.1)  0%, transparent 55%),
+    radial-gradient(ellipse 50%  40% at 80%  5%,  rgba(60,  20, 120, 0.08) 0%, transparent 50%);
+  background-attachment: fixed;
 }
 
+/* ─── Header ────────────────────────────────────────────────── */
 header {
-    background-color: rgba(255, 255, 255, 0.8);
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 50px;
-    position: sticky;
-    top:0;    
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(6, 4, 18, 0.72);
+  backdrop-filter: blur(20px) saturate(1.8);
+  -webkit-backdrop-filter: blur(20px) saturate(1.8);
+  border-bottom: 1px solid var(--glass-border);
+  padding: 0 clamp(16px, 5vw, 60px);
 }
 
-header h1{
-    text-align: center;
-    color: black;
-    font-size: large;
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 58px;
+  gap: 20px;
 }
 
-nav{
-    padding: 0%;
+header h1 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  background: linear-gradient(100deg, var(--accent) 0%, var(--accent-2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
-nav ul{
-    display: flex;
-    justify-content: center;
-    gap: 15%;
-    padding: 0%;
+/* ─── Navigation principale ─────────────────────────────────── */
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2px;
 }
 
-nav ul li {
-    list-style: none;
+nav ul li a {
+  position: relative;
+  display: inline-block;
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: color 0.2s var(--ease), background 0.2s var(--ease);
 }
 
-nav ul li a{
-    text-decoration: none;
-}
-
-nav ul li a:link{
-   font-size: large;
-   text-decoration: none;
-   color: black;
-}
-
-nav ul li a:visited{
-    color: black;
- }
-
-#courant{ /* pour coloré dans la bar de navigation la page courrante */
-    color : #0003b3;
-    font-weight: bold;
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 14px;
+  right: 14px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.22s var(--ease);
 }
 
 nav ul li a:hover {
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.06);
 }
 
-hr{
-    width: 60%;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    height: 2px;
-    background-color: #090b7c;
-    border: none;
+nav ul li a:hover::after,
+nav ul li a#courant::after {
+  transform: scaleX(1);
 }
 
-footer{
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 50px;
+nav ul li a#courant {
+  color: var(--text);
+  font-weight: 600;
 }
 
-@media screen and (max-width: 1100px) { /*resonsive format telephone*/ 
-    body{
-        background: linear-gradient(to bottom right, rgb(135, 185, 255), rgb(255, 178, 225), rgb(241, 172, 99), rgb(255, 102, 196));
-    }
+/* ─── Sous-navigation (pages détail SAE) ────────────────────── */
+.sub-nav {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 6px 0 4px;
+}
+
+.sub-nav ul {
+  justify-content: center;
+  gap: 4px;
+}
+
+.sub-nav ul li a {
+  font-size: 0.8rem;
+  padding: 4px 16px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  color: var(--text-muted);
+}
+
+.sub-nav ul li a:hover {
+  border-color: var(--glass-border);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.sub-nav ul li a#courant {
+  background: rgba(167, 139, 250, 0.13);
+  border-color: rgba(167, 139, 250, 0.32) !important;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.sub-nav ul li a#courant::after {
+  display: none;
+}
+
+/* ─── Séparateur ────────────────────────────────────────────── */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--glass-border) 30%, var(--glass-border) 70%, transparent 100%);
+  margin: 48px auto;
+  width: 65%;
+}
+
+/* ─── Liens globaux ─────────────────────────────────────────── */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.18s;
+}
+
+a:hover {
+  opacity: 0.78;
+}
+
+/* ─── Responsive nav ────────────────────────────────────────── */
+@media screen and (max-width: 600px) {
+  .header-row {
+    flex-direction: column;
+    height: auto;
+    padding: 12px 0 8px;
+    gap: 8px;
+  }
+
+  nav ul li a {
+    font-size: 0.82rem;
+    padding: 5px 10px;
+  }
 }

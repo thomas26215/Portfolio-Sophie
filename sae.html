@@ -1,51 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio</title>
-    <link rel="stylesheet" type="text/css" href="./style/homepage.css">
+    <title>Projets en BUT – Sophie ARNAUD</title>
     <link rel="stylesheet" type="text/css" href="./style/headerStyle.css">
+    <link rel="stylesheet" type="text/css" href="./style/sae.css">
 </head>
 <body>
     <header>
-        <nav>
+        <div class="header-row">
             <h1>Sophie ARNAUD</h1>
-            <ul>
-                <li><a href="index.html">Profil</a></li>
-                <li><a href="sae.html" id="courant">Projets en BUT</a></li>
-                <li><a href="parcourScolaireEtDiplome.html">Formation</a></li>    
-            </ul>
-        </nav>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Profil</a></li>
+                    <li><a href="sae.html" id="courant">Projets en BUT</a></li>
+                    <li><a href="parcourScolaireEtDiplome.html">Formation</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
     <main>
-        <p>Dans le cadre du BUT informatique, j'ai pu réaliser de nombreux projets.</p>
-        <div><a href="sae/dev.html">Voir tous mes projets</a></div>
-        <h2>Quatième semestre</h2>
-        <div>
-            <a href="sae/dev.html#dev3">Refactoring d'une application mobile JAVA Android</a>
+
+        <div class="page-header">
+            <div>
+                <h2>Projets</h2>
+                <p>BUT Informatique &mdash; 4 semestres</p>
+            </div>
+            <span class="project-count">07</span>
         </div>
-        <h2>Troisième semestre</h2>
-        <div>
-            <a href="sae/web.html#web3">valorisation du patrimoine culturel français : Rézisten</a>
-        </div>
-        <h2>Deuxième semestre</h2>
-        <div>
-            <a href="sae/dev.html#dev2">Mon projet en JAVA / JavaFX / FXML : Orgabrac</a>
-        </div>
-        <div>
-            <a href="sae/bd.html#bd2">Mon projet en Base de données</a>
-        </div>
-        <h2>Premier semestre</h2>
-        <div>
-            <a href="sae/dev.html#dev1">Mon projet en JAVA</a>
-        </div>
-        <div>
-            <a href="sae/bd.html#bd1">Mon projet en Base de données</a>
-        </div>
-        <div>
-            <a href="sae/web.html#web1">Mon projet en développement web</a>
-        </div>
+
+        <!-- ── Semestre 4 ──────────────────────────────────── -->
+        <section class="semester-block">
+            <div class="semester-header">
+                <span class="semester-num">04</span>
+                <span class="semester-title">Quatrième semestre</span>
+                <span class="semester-line"></span>
+            </div>
+            <div class="semester-projects single">
+                <article class="project-card dev featured">
+                    <div class="card-meta">
+                        <span class="cat-dot"></span>
+                        <span class="card-category">Programmation</span>
+                    </div>
+                    <h3 class="card-title">Refactoring d'une application mobile Android</h3>
+                    <p class="card-desc">
+                        Correction et refactorisation d'une application Android JAVA pour le suivi de recherche
+                        de stage, et d'une interface Symfony pour les enseignants. Chef de projet — organisation,
+                        priorisation des bugs et coordination de l'équipe.
+                    </p>
+                    <div class="card-footer">
+                        <div class="card-tags">
+                            <span>JAVA</span><span>Android</span><span>Symfony</span><span>Gestion de projet</span>
+                        </div>
+                        <a href="sae/dev.html#dev3" class="card-link">Voir →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ── Semestre 3 ──────────────────────────────────── -->
+        <section class="semester-block">
+            <div class="semester-header">
+                <span class="semester-num">03</span>
+                <span class="semester-title">Troisième semestre</span>
+                <span class="semester-line"></span>
+            </div>
+            <div class="semester-projects single">
+                <article class="project-card web featured">
+                    <div class="card-meta">
+                        <span class="cat-dot"></span>
+                        <span class="card-category">Développement web</span>
+                    </div>
+                    <h3 class="card-title">Rézisten — Valorisation du patrimoine de la Résistance</h3>
+                    <p class="card-desc">
+                        Jeu narratif web pour découvrir les lieux de la Résistance française pendant la Seconde
+                        Guerre mondiale. Développé en PHP/HTML/CSS/JS sans framework. En charge de la charte
+                        graphique, des maquettes et du développement frontend.
+                    </p>
+                    <div class="card-footer">
+                        <div class="card-tags">
+                            <span>PHP</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+                        <a href="sae/web.html#web3" class="card-link">Voir →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ── Semestre 2 ──────────────────────────────────── -->
+        <section class="semester-block">
+            <div class="semester-header">
+                <span class="semester-num">02</span>
+                <span class="semester-title">Deuxième semestre</span>
+                <span class="semester-line"></span>
+            </div>
+            <div class="semester-projects double">
+                <article class="project-card dev">
+                    <div class="card-meta">
+                        <span class="cat-dot"></span>
+                        <span class="card-category">Programmation</span>
+                    </div>
+                    <h3 class="card-title">Orgabrac — Organisation de vide-greniers</h3>
+                    <p class="card-desc">
+                        Application JavaFX pour organiser des vides-greniers, conçue et développée
+                        en équipe de 6. Conception UML, gestion de projet, développement.
+                    </p>
+                    <div class="card-footer">
+                        <div class="card-tags">
+                            <span>JAVA</span><span>JavaFX</span><span>FXML</span>
+                        </div>
+                        <a href="sae/dev.html#dev2" class="card-link">Voir →</a>
+                    </div>
+                </article>
+
+                <article class="project-card bd">
+                    <div class="card-meta">
+                        <span class="cat-dot"></span>
+                        <span class="card-category">Base de données</span>
+                    </div>
+                    <h3 class="card-title">Étude statistique du Nutriscore</h3>
+                    <p class="card-desc">
+                        Nettoyage et analyse statistique de la base Open Food Facts en SQL,
+                        focus boissons sucrées en France. Rapport et graphiques en anglais.
+                    </p>
+                    <div class="card-footer">
+                        <div class="card-tags">
+                            <span>SQL</span><span>Statistiques</span>
+                        </div>
+                        <a href="sae/bd.html#bd2" class="card-link">Voir →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ── Semestre 1 ──────────────────────────────────── -->
+        <section class="semester-block">
+            <div class="semester-header">
+                <span class="semester-num">01</span>
+                <span class="semester-title">Premier semestre</span>
+                <span class="semester-line"></span>
+            </div>
+            <div class="semester-projects triple">
+                <article class="project-card dev">
+                    <div class="card-meta">
+                        <span class="cat-dot"></span>
+                        <span class="card-category">Programmation</span>
+                    </div>
+                    <h3 class="card-title">Classement automatique de dépêches</h3>
+                    <p class="card-desc">
+                        Algorithme JAVA de tri automatique par catégorie via lexiques manuels
+                        puis auto-générés. Rapport technique en anglais.
+                    </p>
+                    <div class="card-footer">
+                        <div class="card-tags">
+                            <span>JAVA</span>
+                        </div>
+                        <a href="sae/dev.html#dev1" class="card-link">Voir →</a>
+                    </div>
+                </article>
+
+                <article class="project-card bd">
+                    <div class="card-meta">
+                        <span class="cat-dot"></span>
+                        <span class="card-category">Base de données</span>
+                    </div>
+                    <h3 class="card-title">Base de données Titanic</h3>
+                    <p class="card-desc">
+                        Création et interrogation d'une base SQL sur les passagers du Titanic
+                        pour analyser les facteurs de survie.
+                    </p>
+                    <div class="card-footer">
+                        <div class="card-tags">
+                            <span>SQL</span>
+                        </div>
+                        <a href="sae/bd.html#bd1" class="card-link">Voir →</a>
+                    </div>
+                </article>
+
+                <article class="project-card web">
+                    <div class="card-meta">
+                        <span class="cat-dot"></span>
+                        <span class="card-category">Développement web</span>
+                    </div>
+                    <h3 class="card-title">Site institutionnel Hardis Group</h3>
+                    <p class="card-desc">
+                        Site web pour Hardis Group conçu en groupe de 4, destiné à des
+                        collégiens en recherche de stage.
+                    </p>
+                    <div class="card-footer">
+                        <div class="card-tags">
+                            <span>HTML</span><span>CSS</span>
+                        </div>
+                        <a href="sae/web.html#web1" class="card-link">Voir →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
     </main>
 </body>
 </html>

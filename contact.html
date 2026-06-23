@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact – Sophie ARNAUD</title>
+    <link rel="stylesheet" type="text/css" href="./style/headerStyle.css">
+    <link rel="stylesheet" type="text/css" href="./style/contact.css">
+</head>
+<body>
+    <header>
+        <div class="header-row">
+            <h1>Sophie ARNAUD</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Profil</a></li>
+                    <li><a href="sae.html">Projets en BUT</a></li>
+                    <li><a href="parcourScolaireEtDiplome.html">Formation</a></li>
+                    <li><a href="contact.html" id="courant">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h2>Contactez-moi</h2>
+            <p>N'hésitez pas à me contacter pour toute question, opportunité de stage ou simplement pour échanger.</p>
+        </div>
+
+        <a href="mailto:so.arnaud26@gmail.com" class="contact-info">
+            <img src="./style/images/envelope.svg" alt="">
+            Envoyer un email directement
+        </a>
+
+        <form class="contact-form" action="mailto:so.arnaud26@gmail.com" method="post" enctype="text/plain">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nom">Nom</label>
+                    <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="sujet">Sujet</label>
+                <input type="text" id="sujet" name="sujet" placeholder="Objet de votre message">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Votre message…" required></textarea>
+            </div>
+            <div class="form-submit">
+                <button type="submit" class="btn-submit">Envoyer le message &rarr;</button>
+            </div>
+        </form>
+    </main>
+</body>
+</html>

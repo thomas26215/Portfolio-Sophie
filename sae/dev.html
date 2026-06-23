@@ -2,42 +2,45 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
-		<title>portfolio</title>
-        <link rel="stylesheet" type="text/css" href="../style/portfolio.css">
-        <link rel="stylesheet" type="text/css" href="../style/headerStyle.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Programmation – Sophie ARNAUD</title>
+		<link rel="stylesheet" type="text/css" href="../style/headerStyle.css">
+		<link rel="stylesheet" type="text/css" href="../style/portfolio.css">
 	</head>
     <body>
         <header>
-            <h1>Sophie ARNAUD</h1>
-            <nav>
-                <ul>
-                    <li><a href="./../index.html">Profil</a></li>
-                    <li><a href="./../sae.html" id="courant">Projets en BUT</a></li>
-                    <li><a href="./../parcourScolaireEtDiplome.html">Formation</a></li>    
-                </ul>
-            </nav>
-            <hr>
-            <nav>
+            <div class="header-row">
+                <h1>Sophie ARNAUD</h1>
+                <nav>
+                    <ul>
+                        <li><a href="./../index.html">Profil</a></li>
+                        <li><a href="./../sae.html" id="courant">Projets en BUT</a></li>
+                        <li><a href="./../parcourScolaireEtDiplome.html">Formation</a></li>
+                        <li><a href="./../contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <nav class="sub-nav">
                 <ul>
                     <li><a href="dev.html" id="courant">Programmation</a></li>
                     <li><a href="bd.html">Base de données</a></li>
-                    <li><a href="web.html">Dévoloppement web</a></li>
+                    <li><a href="web.html">Développement web</a></li>
                 </ul>
             </nav>
         </header>
         <main>
             <article id="dev3">
-                <h2>S4 : Refactoring d'une application communicante pour le suivi de la recherche de stage</h2> 
+                <h2>S4 : Refactoring d'une application communicante pour le suivi de la recherche de stage</h2>
                 <p>
-                    L’objectif de ce projet était de refactoriser une application qui permet aux étudiants d'informer le responsable des stages de l'IUT
-                     de leur avancée dans leurs recherches. Pour cela, il nous a été donné le code source d'une application Android en <b>JAVA</b> pour les étudiants et 
-                    une en <b>Synfony</b> pour le professeur référent des stages. 
+                    L'objectif de ce projet était de refactoriser une application qui permet aux étudiants d'informer le responsable des stages de l'IUT
+                    de leur avancée dans leurs recherches. Pour cela, il nous a été donné le code source d'une application Android en <b>JAVA</b> pour les étudiants et
+                    une en <b>Symfony</b> pour le professeur référent des stages.
                 </p>
                 <div>
                     <div>
                         <h3>Travail de Groupe</h3>
-                        Tout d'abord, nous devions identifier les différents problèmes et nous les avons hiérarchisés, par exemple, nous avons priorisé les bugs qui empêchaient 
-                        d'utiliser l'application correctement. 
+                        Tout d'abord, nous devions identifier les différents problèmes et nous les avons hiérarchisés, par exemple, nous avons priorisé les bugs qui empêchaient
+                        d'utiliser l'application correctement.
                         Ensuite, nous les avons attribués à chaque membre de l'équipe pour les corriger. Nous avons également proposé un nouveau schéma relationnel de base de données en forme 3 FN.
                     </div>
                     <div>
@@ -46,55 +49,60 @@
                     </div>
                 </div>
                 <p>
-                    Ce projet m’a permis d’apprendre à comprendre le code d'une autre personne et de pouvoir le corriger et donc j'ai pu me rendre compte de l'impact qu'a la qualité de code sur la maintenabilité d'une application.
+                    Ce projet m'a permis d'apprendre à comprendre le code d'une autre personne et de pouvoir le corriger et donc j'ai pu me rendre compte de l'impact qu'a la qualité de code sur la maintenabilité d'une application.
                 </p>
             </article>
+
             <hr>
+
             <article id="dev2">
-                <h2>S2 : Développement d'une application d'aide à l'organisation d'événement en <b>JAVA</b> <img src="../style/orgabrac/LogoSansFond.png" alt="logo orgabrac" height="100px"></h2> 
+                <h2>S2 : Développement d'une application d'aide à l'organisation d'événement en <b>JAVA</b> <img src="../style/orgabrac/LogoSansFond.png" alt="logo Orgabrac"></h2>
                 <p>
-                    L’objectif de ce projet était de réaliser une application lourde pour aider un organisateur d'événement
-                     en <b>JAVA, JavaFX et FXML</b> en équipe de 6. Nous devions choisir le type d'événement puis faire la conception 
+                    L'objectif de ce projet était de réaliser une application lourde pour aider un organisateur d'événement
+                    en <b>JAVA, JavaFX et FXML</b> en équipe de 6. Nous devions choisir le type d'événement puis faire la conception
                     puis réaliser le code.
                 </p>
                 <div>
                     <div>
                         <h3>Travail de Groupe</h3>
                         Nous avons tout d'abord choisi notre type d'événement : les vides-greniers. Nous avons trouvé un nom, un logo, les couleurs.
-                        Par la suite, nous avons en parrallèle rédigé le dossier de gestion de projet (avec en particulier les contraintes, les risques
-                         induits et la mitigation) et le dossier de conception UML (avec les diagrammes des cas d'utilisation, leurs priorisation).
+                        Par la suite, nous avons en parallèle rédigé le dossier de gestion de projet (avec en particulier les contraintes, les risques
+                        induits et la mitigation) et le dossier de conception UML (avec les diagrammes des cas d'utilisation, leurs priorisation).
                     </div>
                     <div>
                         <h3>Travail Personnel</h3>
-                        Je me suis occupée de la partie communication, de la distribution des tâches dans la première partie de 
-                        conception. J'ai fait quelques fonctions comme par exemple, le fait de bloquer et d'entourer en rouge les 
+                        Je me suis occupée de la partie communication, de la distribution des tâches dans la première partie de
+                        conception. J'ai fait quelques fonctions comme par exemple, le fait de bloquer et d'entourer en rouge les
                         champs obligatoires dans le formulaire.
                     </div>
                 </div>
                 <img src="../style/orgabrac/creation.png" alt="formulaire de création d'une brocante">
                 <p>
-                    Ce projet m’a permis d’apprendre à faire du code dans une équipe, comprendre le code des autres et
-                     distribuer les tâches.
+                    Ce projet m'a permis d'apprendre à faire du code dans une équipe, comprendre le code des autres et
+                    distribuer les tâches.
                 </p>
             </article>
+
             <hr>
+
             <article id="dev1">
                 <h2>S1 : Classement automatique de dépêches</h2>
                 <p>
-                    L’objectif de ce projet était de trier automatiquement des dépêches de presse dans différentes catégories comme, par exemple, sport, culture, politique… avec le plus haut pourcentage de réussite possible en optimisant au mieux notre programme.
+                    L'objectif de ce projet était de trier automatiquement des dépêches de presse dans différentes catégories comme, par exemple, sport, culture, politique… avec le plus haut pourcentage de réussite possible en optimisant au mieux notre programme.
                 </p>
                 <div>
                     <div>
                         <h3>Travail de Groupe</h3>
-                        Nous avons réalisé ce projet en binôme en deux phases. Dans un premier temps en s’aidant de lexiques créés manuellement par catégorie, en associant des mots clés à un poids (entre 1 et 3). Les dépêches sont ensuite associées à une catégorie en calculant leurs poids pour chaque catégorie.
-                        Dans un second temps, les lexiques sont créés automatiquement en calculant la récurrence de mots d’autres dépêches qui ont une catégorie donnée. Pour ces deux phases, il fallait calculer le taux de réussite et optimiser les lexiques créés manuellement et optimiser le programme pour que ce taux soit le plus haut possible et faire un rapport détaillé en anglais pour expliquer notre code.
+                        Nous avons réalisé ce projet en binôme en deux phases. Dans un premier temps en s'aidant de lexiques créés manuellement par catégorie, en associant des mots clés à un poids (entre 1 et 3). Les dépêches sont ensuite associées à une catégorie en calculant leurs poids pour chaque catégorie.
+                        Dans un second temps, les lexiques sont créés automatiquement en calculant la récurrence de mots d'autres dépêches qui ont une catégorie donnée. Pour ces deux phases, il fallait calculer le taux de réussite et optimiser les lexiques créés manuellement et optimiser le programme pour que ce taux soit le plus haut possible et faire un rapport détaillé en anglais pour expliquer notre code.
                     </div>
                     <div>
                         <h3>Travail Personnel</h3>
-                        Je me suis occupée de réaliser tout le code et de l’optimiser au mieux et de le détailler à l’aide de nombreux commentaires.
+                        Je me suis occupée de réaliser tout le code et de l'optimiser au mieux et de le détailler à l'aide de nombreux commentaires.
                     </div>
                 </div>
-                <p>Ce projet m’a permis de travailler avec une personne d'un niveau plus faible que le mien et donc d’expliquer mon code pour que mon camarade comprenne et puisse ensuite l’expliquer à son tour.</p>
+                <p>Ce projet m'a permis de travailler avec une personne d'un niveau plus faible que le mien et donc d'expliquer mon code pour que mon camarade comprenne et puisse ensuite l'expliquer à son tour.</p>
             </article>
         </main>
     </body>
+</html>

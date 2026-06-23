@@ -1,60 +1,201 @@
-body main{
-    width: 50%;
-    margin: auto;
-    font-size: larger;
-    text-align: justify;
-    display: flex;
+/* ─── Animations ────────────────────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0);     }
+}
+
+/* ─── Conteneur principal ───────────────────────────────────── */
+body main {
+  width: min(640px, 88%);
+  margin: 0 auto;
+  padding: 44px 0 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+/* ─── Cards / Articles ──────────────────────────────────────── */
+main article {
+  background: rgba(255, 255, 255, 0.04);
+  
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 22px 28px;
+  color: rgba(255, 255, 255, 0.91);
+  text-align: left;
+  text-indent: 0;
+  transition: transform 0.22s var(--ease, ease),
+              box-shadow 0.22s var(--ease, ease),
+              border-color 0.22s var(--ease, ease);
+  animation: fadeInUp 0.45s ease both;
+}
+
+main article:nth-child(1) { animation-delay: 0.05s; }
+main article:nth-child(2) { animation-delay: 0.11s; }
+main article:nth-child(3) { animation-delay: 0.17s; }
+main article:nth-child(4) { animation-delay: 0.23s; }
+main article:nth-child(5) { animation-delay: 0.29s; }
+main article:nth-child(6) { animation-delay: 0.35s; }
+
+main article:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 38px rgba(139, 92, 246, 0.14);
+  border-color: rgba(167, 139, 250, 0.22);
+}
+
+/* ─── Titres dans les cards ─────────────────────────────────── */
+main article h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 10px;
+  color: #fff;
+}
+
+/* ─── Listes ────────────────────────────────────────────────── */
+main article ul {
+  padding-left: 22px;
+  margin: 6px 0 0;
+}
+
+main article ul li {
+  margin-bottom: 5px;
+}
+
+/* ─── Layout colonne (image + texte) ───────────────────────── */
+.colonne {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.colonne img {
+  width: 80px;
+  height: auto;
+  border-radius: 8px;
+  flex-shrink: 0;
+  object-fit: contain;
+  margin-bottom: 0;
+}
+
+/* ─── Article contact ───────────────────────────────────────── */
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.contact img {
+  width: 22px;
+  height: 22px;
+  filter: invert(1) brightness(0.75);
+  flex-shrink: 0;
+  margin-bottom: 0;
+}
+
+/* ─── Liens dans les cards ──────────────────────────────────── */
+main article a {
+  color: var(--accent, #a78bfa);
+  font-weight: 500;
+  opacity: 1;
+}
+
+main article a:hover {
+  opacity: 0.78;
+  text-decoration: underline;
+}
+
+/* ─── Page SAE : intro + blocs projets ─────────────────────── */
+main > p {
+  background: rgba(255, 255, 255, 0.04);
+  
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  padding: 18px 26px;
+  color: rgba(255, 255, 255, 0.91);
+  animation: fadeInUp 0.45s 0.05s ease both;
+}
+
+main > h2 {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 20px 0 4px;
+  padding-left: 6px;
+}
+
+main > div {
+  background: rgba(255, 255, 255, 0.04);
+  
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 15px 22px;
+  color: rgba(255, 255, 255, 0.91);
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease,
+              border-color 0.2s ease;
+  animation: fadeInUp 0.45s ease both;
+}
+
+main > div:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(139, 92, 246, 0.16);
+  border-color: rgba(167, 139, 250, 0.25);
+}
+
+main > div a {
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 500;
+  display: block;
+  opacity: 1;
+}
+
+main > div a:hover {
+  color: var(--accent, #a78bfa);
+  text-decoration: none;
+  opacity: 1;
+}
+
+/* ─── Page Formation : badges compétences ───────────────────── */
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.skills ul li {
+  background: rgba(167, 139, 250, 0.13);
+  border: 1px solid rgba(167, 139, 250, 0.28);
+  color: var(--accent, #a78bfa);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+/* ─── Responsive ────────────────────────────────────────────── */
+@media screen and (max-width: 680px) {
+  body main {
+    width: 90%;
+    padding: 28px 0 64px;
+  }
+
+  main article {
+    padding: 18px 20px;
+  }
+
+  .colonne {
     flex-direction: column;
-    color: white;
-}
+  }
 
-main article{
-    background-color: rgb(0, 0, 0,0.4);
-    border-radius: 10px;
-    padding: 2vw;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-indent: 10%;
-}
-
-main div{
-    background-color: rgb(0, 0, 0,0.4);
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    box-shadow: 2px 2px 25px white;
-}
-
-a{
-    color: white;
-    text-decoration: none;
-}
-
-img{
-    margin-bottom: -8px;
-}
-
-.colonne{
-    display: flex;
-}
-
-@media screen and (max-width: 950px) { /*resonsive format telephone*/ 
-    .colonne{
-        flex-direction: column;
-    }
-
-    body main{
-        width: 75%;
-        margin: auto;
-        text-align: left;
-    }
-
-    img{
-        width: auto;
-        height: auto;
-        max-width: none;
-        max-height: none;
-        object-fit: none;
-    }
+  .colonne img {
+    width: 64px;
+  }
 }
