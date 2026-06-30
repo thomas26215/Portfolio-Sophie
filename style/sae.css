@@ -135,6 +135,7 @@ main {
 .project-card.dev:hover  { box-shadow: 0 12px 40px rgba(139, 92, 246, 0.18); }
 .project-card.bd:hover   { box-shadow: 0 12px 40px rgba(56, 189, 248, 0.14); }
 .project-card.web:hover  { box-shadow: 0 12px 40px rgba(244, 114, 182, 0.18); }
+.project-card.full:hover { box-shadow: 0 12px 40px rgba(52, 211, 153, 0.18); }
 
 /* Halo coloré discret en haut de la carte */
 .project-card::after {
@@ -146,9 +147,10 @@ main {
   transition: opacity 0.22s ease;
 }
 
-.project-card.dev::after { background: linear-gradient(90deg, transparent, #a78bfa, transparent); }
-.project-card.bd::after  { background: linear-gradient(90deg, transparent, #38bdf8, transparent); }
-.project-card.web::after { background: linear-gradient(90deg, transparent, #f472b6, transparent); }
+.project-card.dev::after  { background: linear-gradient(90deg, transparent, #a78bfa, transparent); }
+.project-card.bd::after   { background: linear-gradient(90deg, transparent, #38bdf8, transparent); }
+.project-card.web::after  { background: linear-gradient(90deg, transparent, #f472b6, transparent); }
+.project-card.full::after { background: linear-gradient(90deg, transparent, #34d399, transparent); }
 
 .project-card:hover::after { opacity: 1; }
 
@@ -166,9 +168,10 @@ main {
   flex-shrink: 0;
 }
 
-.dev .cat-dot  { background: #a78bfa; }
-.bd  .cat-dot  { background: #38bdf8; }
-.web .cat-dot  { background: #f472b6; }
+.dev  .cat-dot { background: #a78bfa; }
+.bd   .cat-dot { background: #38bdf8; }
+.web  .cat-dot { background: #f472b6; }
+.full .cat-dot { background: #34d399; }
 
 .card-category {
   font-size: 0.7rem;
@@ -177,9 +180,10 @@ main {
   letter-spacing: 1.2px;
 }
 
-.dev .card-category { color: rgba(167, 139, 250, 0.7); }
-.bd  .card-category { color: rgba(56, 189, 248, 0.7);  }
-.web .card-category { color: rgba(244, 114, 182, 0.7); }
+.dev  .card-category { color: rgba(167, 139, 250, 0.7); }
+.bd   .card-category { color: rgba(56, 189, 248, 0.7);  }
+.web  .card-category { color: rgba(244, 114, 182, 0.7); }
+.full .card-category { color: rgba(52, 211, 153, 0.7);  }
 
 /* ─── Titre ─────────────────────────────────────────────────── */
 .card-title {
@@ -246,15 +250,17 @@ main {
 .dev  .card-link { color: rgba(167, 139, 250, 0.7) !important; }
 .bd   .card-link { color: rgba(56, 189, 248, 0.7)  !important; }
 .web  .card-link { color: rgba(244, 114, 182, 0.7) !important; }
+.full .card-link { color: rgba(52, 211, 153, 0.7)  !important; }
 
 .project-card:hover .card-link {
   gap: 9px;
   opacity: 1 !important;
 }
 
-.dev:hover  .card-link { color: #a78bfa !important; }
-.bd:hover   .card-link { color: #38bdf8 !important; }
-.web:hover  .card-link { color: #f472b6 !important; }
+.dev:hover   .card-link { color: #a78bfa !important; }
+.bd:hover    .card-link { color: #38bdf8 !important; }
+.web:hover   .card-link { color: #f472b6 !important; }
+.full:hover  .card-link { color: #34d399 !important; }
 
 /* ─── Responsive ─────────────────────────────────────────────── */
 @media screen and (max-width: 740px) {
